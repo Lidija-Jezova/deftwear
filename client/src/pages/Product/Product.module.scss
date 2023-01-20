@@ -1,0 +1,143 @@
+.wrapper {
+  padding: 4rem 4rem 0;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: 6rem;
+
+  @media (max-width: 1365px) {
+    padding: 4rem 2rem 0;
+  }
+
+  @media (max-width: 1023px) {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+.images {
+  display: flex;
+  gap: 2rem;
+}
+
+.imagesSmall {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.imageSmall {
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.imageMain {
+  width: 100%;
+  padding-bottom: 80%;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.price {
+  font-size: 2rem;
+}
+
+.text {
+  font-size: 1.8rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  div {
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .cartIcon {
+      font-size: 2rem;
+    }
+  }
+}
+
+.selection {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  span {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+}
+
+.addTo {
+  display: flex;
+  gap: 2rem;
+
+  span {
+    color: #5268ff;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+
+    .icon {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

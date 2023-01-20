@@ -1,0 +1,51 @@
+.priceRange {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.top {
+  display: flex;
+  gap: 1rem;
+}
+
+.field {
+  width: 8rem;
+  height: 3.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  input {
+    font-family: inherit;
+    font-size: inherit;
+    width: 8rem;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #b9b9b9;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+
+    &:focus {
+      outline-color: #5268ff;
+    }
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}

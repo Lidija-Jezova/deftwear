@@ -1,0 +1,16 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  column-gap: 4rem;
+  row-gap: 4rem;
+
+  @media (max-width: 1400px) {
+    padding: 0;
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, minmax(12rem, 1fr));
+    grid-template-rows: repeat(2, auto);
+    column-gap: 2rem;
+  }
+}

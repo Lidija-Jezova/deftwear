@@ -1,0 +1,35 @@
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.checkbox {
+  font-size: 1.6rem;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.1em;
+  height: 1.1em;
+  border-radius: 0.15em;
+  border: 0.15em solid #b9b9b9;
+  outline: none;
+  cursor: pointer;
+
+  &.checked {
+    border-color: #5268ff;
+    position: relative;
+
+    &::before {
+      content: '\2714';
+      position: absolute;
+      font-size: 0.9em;
+      left: 1px;
+      top: -4px;
+      color: #5268ff;
+    }
+  }
+}
+
+.label {
+
+}

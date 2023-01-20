@@ -1,0 +1,49 @@
+.wrapper {
+  button {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.1s ease 0s;
+  }
+}
+
+.small {
+  min-width: 2rem;
+  min-height: 2rem;
+  padding: 1rem;
+}
+
+.medium {
+  min-width: 4rem;
+  min-height: 4rem;
+  padding: 1rem;
+}
+
+.large {
+  min-width: 6rem;
+  min-height: 6rem;
+  padding: 1rem;
+}
+
+.regular {
+  background-color: #dedede;
+
+  &:hover {
+    background-color: #d2d2d2;
+  }
+}
+
+.primary {
+  background-color: #5268ff;
+  color: #fff;
+
+  &:hover {
+    background-color: #4f63ee;
+  }
+}
