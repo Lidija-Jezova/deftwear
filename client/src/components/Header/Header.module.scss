@@ -5,6 +5,13 @@
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 3rem;
+  }
+
 }
 
 .nav {
@@ -31,6 +38,19 @@
   row-gap: 1rem;
 }
 
+.left {
+  @media (max-width: 600px) {
+    align-self: flex-end;
+  }
+}
+
+.right {
+  @media (max-width: 600px) {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
 .navList {
   flex-wrap: wrap;
 }
@@ -39,15 +59,94 @@
   .icon {
     cursor: pointer;
     font-size: 2.2rem;
+
+    @media (max-width: 600px) {
+      font-size: 2.6rem;
+    }
   }
+}
+
+.toggleMenu {
+  width: 3.5rem;
+  height: 2.5rem;
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  span {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+}
+
+.center, .centerShopName {
+  font-size: 2.8rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .center {
   width: 100%;
-  font-size: 26px;
+  gap: 3rem;
+  
+  .separator {
+    display: none;
+  }
+
+  @media (max-width: 1200px) {
+    display: none;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    flex-direction: column;
+    z-index: 10;
+
+    .navList {
+      flex-direction: column;
+      column-gap: 3rem;
+      row-gap: 3rem;
+    }
+
+    .shopName {
+      display: none;
+    }
+    
+    .separator {
+      display: block;
+      width: 20rem;
+      height: 2px;
+      background-color: #000;
+    }
+  }
+}
+
+.active {
   display: flex;
-  gap: 2rem;
-  justify-content: space-between;
+}
+
+.centerShopName {
+  display: none;
+
+  @media (max-width: 1200px) {
+    display: block;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 3.2rem;
+  }
 }
 
 .item {
@@ -61,7 +160,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  cursor: pointer;
+
   span {
     width: 18px;
     height: 18px;

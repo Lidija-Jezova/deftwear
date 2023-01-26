@@ -1,0 +1,92 @@
+.wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.2s ease 0s;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+    transition: all 0.2s ease 0s;
+  }
+}
+
+.cart {
+  padding: 1rem;
+  width: 40rem;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  right: -120%;
+  transition: all 0.3s ease 0s;
+
+  &.active {
+    right: 0;
+    transition: all 0.3s ease 0s;
+  }
+
+  button {
+    .cartIcon {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.closeWrapper {
+  align-self: flex-end;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.subtotal {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.8rem;
+
+  span {
+
+  }
+}
+
+.reset {
+  align-self: flex-start;
+  border: none;
+  color: red;
+  font-weight: 600;
+  font-size: 1.3rem;
+  background-color: transparent;
+  display: flex;
+  gap: 0.5rem;
+  cursor: pointer;
+}
